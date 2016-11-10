@@ -29,7 +29,7 @@ public class SampleCassandraApplicationTest {
 
 		assertThat(savedHotel.getName(), equalTo("Sample Hotel"));
 
-		this.hotelRepository.delete(savedHotel);
+		//this.hotelRepository.delete(savedHotel);
 	}
 
 	private Hotel sampleHotel() {
