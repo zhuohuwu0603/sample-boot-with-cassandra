@@ -34,7 +34,8 @@ public class SampleCassandraApplicationTest {
 
 	private Hotel sampleHotel() {
 		Hotel hotel = new Hotel();
-		hotel.setId(UUID.randomUUID());
+		//hotel.setId(UUID.randomUUID());
+		hotel.setId(UUID.fromString("2f70cc0f-f25c-4903-bc3e-d783fe3e2919")); //a fixed hotel for test
 		hotel.setName("Sample Hotel");
 		hotel.setAddress("Sample Address");
 		hotel.setZip("8764");

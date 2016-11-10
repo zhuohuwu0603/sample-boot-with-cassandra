@@ -30,4 +30,4 @@ CREATE MATERIALIZED VIEW sample.hotels_by_state AS
 SELECT id, name, address, state, zip FROM hotels
 WHERE state IS NOT NULL AND id IS NOT NULL AND name IS NOT NULL
 PRIMARY KEY ((state), name, id)
-WITH CLUSTERING ORDER BY (name DESC)
+WITH CLUSTERING ORDER BY (name DESC);
