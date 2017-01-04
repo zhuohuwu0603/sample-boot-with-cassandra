@@ -45,6 +45,10 @@ CREATE TABLE IF NOT EXISTS  sample.hotels_by_letter (
 );
 
 
+# Note, first create the previous 2 table, then run SampleCassandraApplicationTest.java
+# After that, create the following Materialized view using the command, it will create a view automatically matching the table with hotels
+# 
+
 CREATE MATERIALIZED VIEW sample.hotels_by_state AS
 SELECT id, name, address, state, zip FROM hotels
 WHERE state IS NOT NULL AND id IS NOT NULL AND name IS NOT NULL
@@ -70,4 +74,10 @@ address: "Sample Address",
 state: null,
 zip: "8764"
 }
+
+- query startwith
+http://localhost:8080/hotels/startingwith/S
+
+- query fromstate
+http://localhost:8080/hotels/fromstate/NYC
 
